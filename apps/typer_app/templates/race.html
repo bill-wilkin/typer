@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'javascript/typer.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/typer_style.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <!-- <img src="" alt=""> -->
+        </div>
+        <div class="target">
+            <h2 id=stopwatch>00:00</h2>
+            <p class="target_text"><span class="completed"></span><span class="blinking-cursor">|</span><span
+                    class="upcoming">{{target.content}}</span></p>
+            <div class="slate">
+                <!-- <textarea name="answer" id="user_input" cols="30" rows="10"></textarea> -->
+                <p class='dummy'><span class="typed"></span><span class="blinking-cursor">|</span></p>
+            </div>
+            <div>
+                <ul id='stats'>
+                    <li id="mistakes">Mistakes: 0</li>
+                    <li id="correct">Correct: 0</li>
+                    <li id="total_keystrokes">Total Keystrokes: 0</li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="test">
+        <div class="slate">
+            <p class='dummy'><span class="typed"></span><span class="blinking-cursor">|</span></p>
+        </div>
+    </div> -->
+        <div class="hidden-form">
+            <form id='hidden-form' action='/type/finish' method='POST'>
+                {% csrf_token %}
+                <input type="hidden" id="total_char" name="total_char">
+                <input type="hidden" id="num_correct" name="num_correct">
+                <input type='hidden' id="mistakes" name='mistakes'>
+                <input type="hidden" id="seconds" name="seconds">
+                <input type="hidden" id="minutes" name="minutes">
+                <input type="hidden" id="whole_string" name="whole_string">
+                <input type="hidden" name="target_id" value="{{ target.id }}">
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

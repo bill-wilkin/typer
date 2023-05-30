@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('../img/sergi-kabrera-2xU7rYxsTiM-unsplash.jpg');
+    background-size: contain;
+}
+.start-race{
+    display: flex;
+    justify-content: center;
+}
+
+.blinking-cursor {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.banner {
+    height: 30vh;
+    width: 100%;
+    background-image: url("../img/john-petalcurin-mHx5LAKkkMo-unsplash.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#end{
+    align-items: flex-end;
+}
+
+.completed {
+    /* background-color: green; */
+    color: green;
+}
+
+.container {
+    height: 100vh;
+    padding: 6%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#my-table {
+    width: 50vw;
+    max-height: 45vh;
+    margin: 0 auto;
+    overflow-y: scroll;
+
+}
+
+
+/* .incorrect {} */
+.slate {
+    background-color: white;
+    height: 20vh;
+    border: 1px black solid;
+    padding: 20px;
+    margin: 50px 0 30px 0;
+}
+
+#stats {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+#stats>li {
+    margin: 20px 30px 0 0;
+    list-style: none;
+    display: flex;
+}
+
+#stopwatch {
+    color: green
+}
+
+.target {
+    margin: 20px;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 2px solid grey;
+}
+
+.target_text,
+target_text>*,
+#user_input,
+.dummy {
+    font-size: 2em;
+}
+
+.user-type {
+    margin: 20px 0;
+
+}
+
+#user_input {
+    width: 97%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wrapper {
+    background: linear-gradient(to bottom right, rgb(158, 83, 190), rgb(2, 71, 9));
+    height: 100vh;
+}
+
+.test {
+    width: 94%;
+    padding: 30px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid black;
+    height: 20vh;
+
+}
+
+/* 
+makes the styling for the blinking cursor */
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 1.5em;
+    color: #2E3D48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+<<<<<<< HEAD
+.btn-primary{
+    background-color: rgb(183 47 255);
+}
+=======
+>>>>>>> c1e3c27b2d7f774d577e659f41bae1b9005324f6
+
+@keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-moz-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-webkit-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-ms-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-o-keyframes "blink" {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
